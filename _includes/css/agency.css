@@ -338,8 +338,7 @@ section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
     font-family: {{ site.data.template.font.secondary }};
-    font-size: 16px;
-    font-style: italic;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -352,6 +351,29 @@ section h3.section-subheading {
 .about-heading {
     margin: 15px 0;
     text-transform: none;
+}
+
+.about-icon-circle {
+    width: 90%;
+    max-width: 400px;
+    height: 90%;
+    max-height: 400px;
+    margin: 0 auto 25px;
+    border: 2px solid #fed136;
+    border-radius: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 #portfolio .portfolio-item {
