@@ -175,6 +175,11 @@ fieldset[disabled] .btn-xl.active {
     background-color: #222;
 }
 
+#test-page .navbar-default {
+    border-color: transparent;
+    background-color: #222;
+}
+
 .navbar-default .navbar-brand {
     font-family: {{ site.data.template.font.primary }};
     color: #{{ site.data.template.color.primary }};
@@ -694,6 +699,132 @@ section h3.section-subheading {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+#test-page {
+    background-color: #222;
+    color: #fff;
+}
+
+#test-page .section-heading,
+#test-page .section-subheading,
+#test-page h1,
+#test-page h2,
+#test-page h3,
+#test-page h4,
+#test-page h5,
+#test-page h6 {
+    color: #fff;
+}
+
+#test-page .text-muted {
+    color: #ccc !important;
+}
+
+#test-page #publications {
+    background-color: #222;
+    color: #fff;
+}
+
+#test-page #publications .container {
+    background-color: #222;
+}
+
+#test-page #publications .publication-item {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+#test-page #publications .publication-item .btn {
+    background-color: #{{ site.data.template.color.primary }};
+    border-color: #{{ site.data.template.color.primary }};
+    color: #333;
+}
+
+#test-page #publications .publication-item .btn:hover {
+    background-color: #333;
+    border-color: #{{ site.data.template.color.primary }};
+    color: #{{ site.data.template.color.primary }};
+}
+
+.publication-year {
+    color: #333;
+    border-bottom: 2px solid #fed136;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.publication-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.publication-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.publication-authors {
+    color: #{{ site.data.template.color.muted-in-dark }};
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.publication-venue {
+    color: #{{ site.data.template.color.muted-in-dark }};
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.publication-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.publication-links {
+    margin-top: 10px;
+}
+
+.publication-links .btn {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #{{ site.data.template.color.primary-light }};
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #{{ site.data.template.color.primary-light }};
+    margin-top: 10px;
+}
+
+.publication-links .btn:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: #{{ site.data.template.color.primary-light }};
+    color: #{{ site.data.template.color.primary-light }};
+}
+
+.publication-links .btn:before {
+    content: "\25BA";
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.bg-darkest-gray {
+    background-color: #222;
 }
 
 .team-member {
