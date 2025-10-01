@@ -582,7 +582,7 @@ section h3.section-subheading {
     .timeline>li .timeline-panel {
         float: left;
         width: 41%;
-        padding: 0 20px 20px 30px;
+        padding: 0 20px 20px 0;
         text-align: right;
     }
 
@@ -601,7 +601,7 @@ section h3.section-subheading {
 
     .timeline>li.timeline-inverted>.timeline-panel {
         float: right;
-        padding: 0 30px 20px 20px;
+        padding: 0 0 20px 20px;
         text-align: left;
     }
 }
@@ -638,7 +638,7 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-panel {
-        padding: 0 20px 20px 100px;
+        padding: 0 20px 20px 20px;
     }
 
     .timeline>li .timeline-image {
@@ -652,8 +652,28 @@ section h3.section-subheading {
     }
 
     .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 100px 20px 20px;
+        padding: 0 20px 20px 20px;
     }
+}
+
+.timeline-example-publication {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #{{ site.data.template.color.primary-light }};
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #{{ site.data.template.color.primary-light }};
+    margin-top: 15px;
+}
+
+.timeline-example-publication:hover {
+    background-color: #{{ site.data.template.color.primary-light }};
+    color: #fff;
+    text-decoration: none;
+    border-color: #{{ site.data.template.color.primary-light }};
 }
 
 .team-member {
