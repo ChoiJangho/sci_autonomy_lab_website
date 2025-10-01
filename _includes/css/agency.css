@@ -827,6 +827,19 @@ section h3.section-subheading {
     background-color: #222;
 }
 
+#contact {
+    color: #fff;
+}
+
+.contact-instruction h3 {
+    text-transform: none;
+}
+
+.contact-instruction .btn:hover {
+    background-color: #{{ site.data.template.color.primary-light }};
+    border-color: #{{ site.data.template.color.primary-light }};
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
