@@ -178,6 +178,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand {
     font-family: {{ site.data.template.font.primary }};
     color: #{{ site.data.template.color.primary }};
+    text-shadow: 0 0 6px rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .8), 0 0 12px rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .6), 0 0 18px rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .4);
 }
 
 .navbar-default .navbar-brand:hover,
@@ -359,7 +360,7 @@ section h3.section-subheading {
     height: 90%;
     max-height: 400px;
     margin: 20px auto 20px;
-    border: 2px solid #fed136;
+    border: 3px solid #{{ site.data.template.color.primary }};
     border-radius: 100%;
     text-align: center;
     overflow: hidden;
@@ -367,6 +368,7 @@ section h3.section-subheading {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 6px rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .8), 0 0 12px rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .6), 0 0 18px rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .4);
 }
 
 .about-icon {
@@ -468,7 +470,7 @@ section h3.section-subheading {
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    background-color: #f1f1f1;
+    background-color: #{{ site.data.template.color.primary-light }};
 }
 
 .timeline>li {
@@ -516,7 +518,7 @@ section h3.section-subheading {
     width: 80px;
     height: 80px;
     margin-left: 0;
-    border: 7px solid #f1f1f1;
+    border: 7px solid #{{ site.data.template.color.primary-light }};
     border-radius: 100%;
     text-align: center;
     color: #fff;
