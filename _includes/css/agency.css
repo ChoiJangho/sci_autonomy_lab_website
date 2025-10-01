@@ -681,6 +681,25 @@ section h3.section-subheading {
     text-decoration: underline;
 }
 
+.timeline-image-zoomed, .timeline-image-zoomed2 {
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.timeline-image-zoomed img {
+    transform: scale(1.66) translate(10px, 4px);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.timeline-image-zoomed2 img {
+    transform: scale(1.55) translate(12px, -8px);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
