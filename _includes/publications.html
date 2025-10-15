@@ -6,366 +6,42 @@
                 <h2 class="section-heading">Publications</h2>
             </div>
         </div>
-        
-        <!-- Preprints Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h4 class="publication-year">Preprints</h4>
+                {% for category_data in site.data.publications.publications %}
+                {% assign category = category_data[0] %}
+                {% assign publications = category_data[1] %}
+                <h4 class="publication-year">{{ category }}</h4>
                 
-                <!-- Publication 1 -->
+                {% for publication in publications %}
                 <div class="publication-item">
                     <div class="row">
                         <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Guided Policy Search">
+                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="{{ publication.title }}">
                         </div> -->
                         <div class="col-md-10">
-                            <h5 class="publication-title">Guided Policy Search for Multi-Agent General-Sum Dynamic Games</h5>
-                            <p class="publication-authors"><strong>J. Li, G. Qu, J. J. Choi, S. Sojoudi, & C. J. Tomlin</strong></p>
-                            <p class="publication-venue">in preparation, 2025</p>
+                            <h5 class="publication-title">{{ publication.title }}</h5>
+                            <p class="publication-authors"><strong>{{ publication.authors }}</strong></p>
+                            <p class="publication-venue">{{ publication.venue }}</p>
                             <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
+                                {% if publication.paper_link and publication.paper_link != "#" %}
+                                <a href="{{ publication.paper_link }}" class="btn btn-primary btn-sm" target="_blank">paper</a>
+                                {% endif %}
+                                {% if publication.video_link and publication.video_link != "" %}
+                                <a href="{{ publication.video_link }}" class="btn btn-primary btn-sm" target="_blank">video</a>
+                                {% endif %}
+                                {% if publication.code_link and publication.code_link != "" %}
+                                <a href="{{ publication.code_link }}" class="btn btn-primary btn-sm" target="_blank">code</a>
+                                {% endif %}
+                                {% if publication.webpage and publication.webpage != "" %}
+                                <a href="{{ publication.webpage }}" class="btn btn-primary btn-sm" target="_blank">webpage</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Publication 2 -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Whole-Body Bilateral Teleoperation">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Whole-Body Bilateral Teleoperation with Multi-Stage Object Parameter Estimation for Wheeled Humanoid Locomanipulation</h5>
-                            <p class="publication-authors"><strong>D. Baek, A. Purushottam, J. J. Choi, & J. Ramos</strong></p>
-                            <p class="publication-venue">arXiv:2508.09846, 2025</p>
-                            <div class="publication-links">
-                                <a href="https://arxiv.org/pdf/2508.09846" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Publication 3 -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Safety Filters">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">When are safety filters safe? On minimum phase conditions of Control Barrier Functions</h5>
-                            <p class="publication-authors"><strong>J. J. Choi, S. Sastry, C. J. Tomlin, & K. Sreenath</strong></p>
-                            <p class="publication-venue">arXiv:2508.07684, 2025</p>
-                            <div class="publication-links">
-                                <a href="https://arxiv.org/pdf/2508.07684" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Forward Reachability Perspective">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Forward Reachability Perspective of Control Barrier Functions and Discount Factor in Reachability</h5>
-                            <p class="publication-authors"><strong>J. J. Choi*, D. Lee*, B. Li, J. P. How, K. Sreenath, S. L. Herbert, & C. J. Tomlin</strong></p>
-                            <p class="publication-venue">arXiv:2310.17180, 2023</p>
-                            <div class="publication-links">
-                                <a href="https://arxiv.org/pdf/2310.17180" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2025 Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h4 class="publication-year">2025</h4>
-                
-                <!-- Journal Publication 1 -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Constraint-Guided Online Data Selection">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Constraint-Guided Online Data Selection for Scalable Data-Driven Safety Filters in Uncertain Robotic Systems</h5>
-                            <p class="publication-authors"><strong>J. J. Choi*, F. Castaneda*, W. Jung*, B. Zhang, C. J. Tomlin, & K. Sreenath</strong></p>
-                            <p class="publication-venue">IEEE Transactions on Robotics, 2025</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Conference Publication 1 -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Data-Driven Hamiltonian">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Data-Driven Hamiltonian for Direct Construction of Safe Set from Trajectory Data</h5>
-                            <p class="publication-authors"><strong>J. J. Choi*, C. A. Strong*, K. Sreenath, N. Cho & C. J. Tomlin</strong></p>
-                            <p class="publication-venue">IEEE Conference on Decision and Control (CDC), 2025</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Conference Publication 2 -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Resolving Conflicting Constraints">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Resolving Conflicting Constraints in Multi-Agent Reinforcement Learning with Layered Safety</h5>
-                            <p class="publication-authors"><strong>J. J. Choi*, J. J. Aloor*, J. Li*, M. G. Mendoza, H. Balakrishnan, & C. J. Tomlin</strong></p>
-                            <p class="publication-venue">Robotics: Science and Systems (RSS), 2025</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Recursively Feasible Probabilistic Safe">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Recursively Feasible Probabilistic Safe Online Learning with Control Barrier Functions</h5>
-                            <p class="publication-authors"><strong>F. Castaneda*, J. J. Choi*, W. Jung, B. Zhang, C. J. Tomlin, & K. Sreenath</strong></p>
-                            <p class="publication-venue">Accepted to IEEE Open Journal of Control
-                                System (OJ-CSYS) (Special Section: Intersection of Machine Learning with Control), 2025</p>
-                            <div class="publication-links">
-                                <a href="https://arxiv.org/pdf/2208.10733" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div>
-
-        <!-- 2024 Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h4 class="publication-year">2024</h4>
-                
-                <!-- Conference Publication 1 -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Gait Switching">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Gait Switching and Enhanced Stabilization of Walking Robots with Deep Learning-based Reachability: A Case Study on Two-link Walker</h5>
-                            <p class="publication-authors"><strong>X. Xia*, J. J. Choi*, A. Agrawal, K. Sreenath, C. J. Tomlin, & S. Bansal</strong></p>
-                            <p class="publication-venue">IEEE Conference on Decision and Control (CDC), 2024</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Conference Publication 2 -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Safety Filters for Black-Box">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Safety Filters for Black-Box Dynamical Systems by Learning Discriminating Hyperplanes</h5>
-                            <p class="publication-authors"><strong>W. Lavanakul*, J. J. Choi*, K. Sreenath, & C. J. Tomlin</strong></p>
-                            <p class="publication-venue">Annual Learning for Dynamics & Control Conference (L4DC), 2024</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2023 and Before Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h4 class="publication-year">2023 and Before</h4>
-                
-                <!-- 2023 Journal Publications -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Flight Envelope Protection">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Towards Flight Envelope Protection for the NASA Tiltwing eVTOL Flight Mode Transition using Hamilton-Jacobi Reachability</h5>
-                            <p class="publication-authors"><strong>T. Hsu, J. J. Choi, D. Amin, C. J. Tomlin, S. C. McWherter, & M. Piedmonte</strong></p>
-                            <p class="publication-venue">Journal of the American Helicopter Society (JAHS), 2023</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Data-Driven Safety Filters">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Data-Driven Safety Filters: Hamilton-Jacobi Reachability, Control Barrier Functions, and Predictive Methods For Uncertain Systems</h5>
-                            <p class="publication-authors"><strong>K. P. Wabersich*, A. J. Taylor*, J. J. Choi*, K. Sreenath, C. J. Tomlin, A. D. Ames, & M. N. Zeilinger</strong></p>
-                            <p class="publication-venue">IEEE Control Systems Magazine (CSM), 2023</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2022 Publications -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Regions of Attraction">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Computation of Regions of Attraction for Hybrid Limit Cycles Using Reachability: An Application to Walking Robots</h5>
-                            <p class="publication-authors"><strong>J. J. Choi, A. Agrawal, K. Sreenath, C. J. Tomlin, & S. Bansal</strong></p>
-                            <p class="publication-venue">IEEE Robotics & Automation Letters (RA-L) (presented at ICRA 2022), 2022</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Lyapunov Density Models">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Lyapunov Density Models: Constraining Distribution Shift in Learning-Based Control</h5>
-                            <p class="publication-authors"><strong>K. Kang, P. Gradu, J. J. Choi, M. Janner, C. Tomlin, & S. Levine</strong></p>
-                            <p class="publication-venue">International Conf. on Machine Learning (ICML), 2022 (Acceptance rate: 22%)</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2021 Publications -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Robust Control Barrier-Value Functions">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Robust Control Barrier-Value Functions for Safety-Critical Control</h5>
-                            <p class="publication-authors"><strong>J. J. Choi, D. Lee, K. Sreenath, C. J. Tomlin, & S. Herbert</strong></p>
-                            <p class="publication-venue">IEEE Conference on Decision and Control (CDC), 2021</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Pointwise Feasibility of Gaussian Process">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Pointwise Feasibility of Gaussian Process-based Safety-Critical Control under Model Uncertainty</h5>
-                            <p class="publication-authors"><strong>F. Castaneda*, J. J. Choi*, B. Zhang, C. J. Tomlin, & K. Sreenath</strong></p>
-                            <p class="publication-venue">IEEE Conference on Decision and Control (CDC), 2021</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Scalable Learning of Safety Guarantees">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Scalable Learning of Safety Guarantees for Autonomous Systems using Hamilton-Jacobi Reachability</h5>
-                            <p class="publication-authors"><strong>S. Herbert*, J. J. Choi*, S. Sanjeev, M. Gibson, K. Sreenath, & C. J. Tomlin</strong></p>
-                            <p class="publication-venue">IEEE International Conference on Robotics and Automation (ICRA), 2021</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Gaussian Process-based Min-norm">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Gaussian Process-based Min-norm Stabilizing Controller for Control-Affine Systems with Uncertain Input Effects</h5>
-                            <p class="publication-authors"><strong>F. Castaneda*, J. J. Choi*, B. Zhang, C. J. Tomlin, & K. Sreenath</strong></p>
-                            <p class="publication-venue">American Control Conference (ACC), 2021</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2020 Publications -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Reinforcement Learning for Safety-Critical Control">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Reinforcement Learning for Safety-Critical Control under Model Uncertainty, using Control Lyapunov Functions and Control Barrier Functions</h5>
-                            <p class="publication-authors"><strong>J. J. Choi*, F. Castaneda*, C. J. Tomlin, & K. Sreenath</strong></p>
-                            <p class="publication-venue">Robotics: Science and Systems (RSS), 2020 (Acceptance rate: 32%)</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2019 Publications -->
-                <div class="publication-item">
-                    <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="Online Social Touch Pattern Recognition">
-                        </div> -->
-                        <div class="col-md-10">
-                            <h5 class="publication-title">Online Social Touch Pattern Recognition with Multi-modal-sensing Modular Tactile Interface</h5>
-                            <p class="publication-authors"><strong>H. Ku*, J. J. Choi*, S. Jang*, W. Do*, S. Lee, & S. Seok</strong></p>
-                            <p class="publication-venue">International Conference on Ubiquitous Robots (UR), 2019</p>
-                            <div class="publication-links">
-                                <a href="#" class="btn btn-primary btn-sm">paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>
