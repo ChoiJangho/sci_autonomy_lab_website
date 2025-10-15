@@ -14,7 +14,11 @@ people:
   position: Principal Investigator
   description: "Assistant Professor, Department of Electrical and Computer Engineering"
   website: "https://jay-choi.me/"
-
+- name: Gechen Qu
+  pic: gechen
+  position: Visiting Master Student (UC Berkeley)
+  description: "Humanoids, Robot Learning, Game Theory"
+  website: ""
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: github
