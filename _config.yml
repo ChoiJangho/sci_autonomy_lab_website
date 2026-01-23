@@ -24,11 +24,26 @@ people:
   position: Master Student
   description: "Robotics, Safety-critical systems"
   website: "https://www.linkedin.com/in/hee-jean-kwon/"
+- name: Jiandong Gu
+  pic: jiandong.jpg
+  position: Master Student
+  description: "Safety for Multi-Robot Systems, Reinforcement Learning"
+  website: "https://gjd2003.github.io/"
+- name: Yujie Rong
+  pic: yujie.jpg
+  position: Master Student
+  description: "Robot Design, Automatic Control"
+  website: ""
 - name: Ryan Teoh
   pic: ryan.png
   position: Undergraduate Student
   description: "Machine Learning, Autonomous Systems, Safe and Robust Control"
   website: "https://land-dev.github.io/ryanteoh/"
+- name: Sanjit Sarda
+  pic: sanjit.jpg
+  position: Undergraduate Student
+  description: "Safety-Critical Control, Optimization, Representation Learning, Perception"
+  website: ""
 - name: Sean Liu
   pic: sean.png
   position: Undergraduate Student
@@ -49,7 +64,7 @@ people:
   position: Undergraduate Student
   description: "Robotics, Control systems, Astronautics"
   website: ""
-- name: Yichi Chen 
+- name: Chelsea Chen 
   pic: yichi.jpg
   position: Undergraduate Student
   description: "Robot Learning, Robot Manipulation, Policy Learning and Evaluation"
