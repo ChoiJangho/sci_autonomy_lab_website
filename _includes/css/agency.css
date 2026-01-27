@@ -840,6 +840,16 @@ section h3.section-subheading {
     border-color: #{{ site.data.template.color.primary-light }};
 }
 
+.team-members-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-members-row > [class*="col-"] {
+    float: none;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
