@@ -16,7 +16,7 @@ people:
   website: "https://jay-choi.me/"
 - name: Gechen Qu
   pic: gechen.jpg
-  position: Visiting Master Student (UC Berkeley)
+  position: Incoming Ph.D. Student
   description: "Humanoids, Robot Learning, Game Theory"
   website: ""
 - name: Hee jean Kwon
@@ -73,11 +73,6 @@ people:
   pic: saanvi.jpg
   position: Undergraduate Student
   description: "Applied Machine Learning, ML for Healthcare"
-  website: ""
-- name: Hao Gu
-  pic: hao.jpg
-  position: Undergraduate Student
-  description: "Robot Learning, Computer Vision"
   website: ""
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
