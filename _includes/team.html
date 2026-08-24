@@ -8,13 +8,35 @@
             </div>
             <div class="row team-members-row">
                 {% for member in site.people %}
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/{{ member.pic }}" class="img-responsive img-circle" alt="">
-                        <h4><a href="{{ member.website }}" target="_blank">{{ member.name }}</a></h4>
+                {% assign hover_pic = member.pic | replace: '.jpeg', '_original.jpeg' | replace: '.png', '_original.png' | replace: '.jpg', '_original.jpg' %}
+                {% assign hover_path = '/img/team/' | append: hover_pic %}
+                {% assign has_color = false %}
+                {% for file in site.static_files %}
+                    {% if file.path == hover_path %}
+                        {% assign has_color = true %}
+                    {% endif %}
+                {% endfor %}
+                {% capture member_inner %}
+                        <div class="team-member-photo">
+                            <img src="img/team/{{ member.pic }}" class="img-responsive team-member-photo-default" alt="{{ member.name }}">
+                            {% if has_color %}
+                            <img src="img/team/{{ hover_pic }}" class="img-responsive team-member-photo-color" alt="">
+                            {% endif %}
+                        </div>
+                        <h4>{{ member.name }}</h4>
                         <p class="text-muted">{{ member.position }}</p>
                         <p class="text-muted">{{ member.description }}</p>
+                {% endcapture %}
+                <div class="col-sm-4">
+                    {% if member.website != blank %}
+                    <a class="team-member" href="{{ member.website }}" target="_blank" rel="noopener">
+                        {{ member_inner }}
+                    </a>
+                    {% else %}
+                    <div class="team-member">
+                        {{ member_inner }}
                     </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>

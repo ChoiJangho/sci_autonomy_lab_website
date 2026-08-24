@@ -16,8 +16,18 @@ people:
   website: "https://jay-choi.me/"
 - name: Gechen Qu
   pic: gechen.jpg
-  position: Incoming Ph.D. Student
+  position: Ph.D. Student
   description: "Humanoids, Robot Learning, Game Theory"
+  website: ""
+- name: Mingke Lu
+  pic: mingke.jpeg
+  position: Ph.D. Student
+  description: "Multi-Robot Systems, Robot Learning"
+  website: ""
+- name: Seunghyeon Lee
+  pic: seunghyeon.jpg
+  position: Ph.D. Student
+  description: "Safety for Robot Manipulation"
   website: ""
 - name: Hee jean Kwon
   pic: jean.jpg

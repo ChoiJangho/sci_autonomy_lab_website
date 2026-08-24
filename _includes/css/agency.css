@@ -932,13 +932,50 @@ section h3.section-subheading {
 }
 
 .team-member {
+    display: block;
     margin-bottom: 50px;
     text-align: center;
+    color: inherit;
+    text-decoration: none;
 }
 
-.team-member img {
+a.team-member:hover,
+a.team-member:focus,
+a.team-member:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.team-member-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
     margin: 0 auto;
-    border: 7px solid #fff;
+    border: 0;
+    border-radius: 0;
+}
+
+.team-member-photo-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.team-member:hover .team-member-photo-color,
+.team-member:focus .team-member-photo-color,
+.team-member:focus-within .team-member-photo-color {
+    opacity: 1;
 }
 
 .team-member h4 {
@@ -947,8 +984,21 @@ section h3.section-subheading {
     text-transform: none;
 }
 
+a.team-member h4 {
+    color: #{{ site.data.template.color.primary }};
+}
+
+a.team-member:hover h4,
+a.team-member:focus h4 {
+    color: #{{ site.data.template.color.primary-light }};
+}
+
 .team-member p {
     margin-top: 0;
+}
+
+a.team-member p.text-muted {
+    color: #{{ site.data.template.color.muted }};
 }
 
 aside.clients img {
