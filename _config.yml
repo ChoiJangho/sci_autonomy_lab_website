@@ -44,16 +44,6 @@ people:
   position: Master Student
   description: "Robot Design, Automatic Control"
   website: ""
-- name: Ryan Teoh
-  pic: ryan.png
-  position: Undergraduate Student
-  description: "Machine Learning, Autonomous Systems, Safe and Robust Control"
-  website: "https://land-dev.github.io/ryanteoh/"
-- name: Sanjit Sarda
-  pic: sanjit.jpg
-  position: Undergraduate Student
-  description: "Safety-Critical Control, Optimization, Representation Learning, Perception"
-  website: ""
 - name: Sean Liu
   pic: sean.png
   position: Undergraduate Student
@@ -84,6 +74,20 @@ people:
   position: Undergraduate Student
   description: "Applied Machine Learning, ML for Healthcare"
   website: ""
+
+alumni-phd: []
+
+alumni-ms: []
+
+alumni-undergrad:
+- name: Ryan Teoh
+  website: "https://land-dev.github.io/ryanteoh/"
+  year: 2026
+- name: Sanjit Sarda
+  website: "https://www.sanjitsarda.com/"
+  year: 2026
+
+alumni-visiting: []
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:

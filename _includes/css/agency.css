@@ -1001,6 +1001,71 @@ a.team-member p.text-muted {
     color: #{{ site.data.template.color.muted }};
 }
 
+#team-alumni {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.team-alumni-heading {
+    margin: 0;
+}
+
+.team-alumni-toggle {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.team-alumni-toggle:hover,
+.team-alumni-toggle:focus {
+    color: #{{ site.data.template.color.primary }};
+    outline: 0;
+}
+
+.team-alumni-toggle:after {
+    content: "\f107";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-weight: 400;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.team-alumni-toggle:not(.collapsed):after {
+    transform: rotate(180deg);
+}
+
+#team-alumni-panel {
+    max-width: 640px;
+    margin: 24px auto 0;
+    text-align: left;
+}
+
+.team-alumni-group h4 {
+    margin: 22px 0 8px;
+    text-transform: none;
+    font-size: 16px;
+}
+
+.team-alumni-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.team-alumni-group li {
+    margin-bottom: 6px;
+    font-family: {{ site.data.template.font.secondary }};
+    font-size: 16px;
+    font-weight: 400;
+}
+
 aside.clients img {
     margin: 50px auto;
 }

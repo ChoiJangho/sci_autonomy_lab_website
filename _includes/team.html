@@ -40,5 +40,36 @@
                 </div>
                 {% endfor %}
             </div>
+            <div id="team-alumni">
+                <h3 class="team-alumni-heading">
+                    <button type="button" class="team-alumni-toggle collapsed" data-toggle="collapse" data-target="#team-alumni-panel" aria-expanded="false" aria-controls="team-alumni-panel">
+                        Alumni
+                    </button>
+                </h3>
+                <div id="team-alumni-panel" class="collapse">
+                    {% assign alumni_groups = "Ph.D. Students|alumni-phd,M.S. Students|alumni-ms,Undergraduate Students|alumni-undergrad,Visiting Students|alumni-visiting" | split: "," %}
+                    {% for group in alumni_groups %}
+                    {% assign group_parts = group | split: "|" %}
+                    {% assign group_label = group_parts[0] %}
+                    {% assign group_key = group_parts[1] %}
+                    {% assign group_people = site[group_key] %}
+                    <div class="team-alumni-group">
+                        <h4>{{ group_label }}</h4>
+                        <ul>
+                            {% for person in group_people %}
+                            <li>
+                                {% if person.website != blank %}
+                                <a href="{{ person.website }}" target="_blank" rel="noopener">{{ person.name }}</a>
+                                {% else %}
+                                {{ person.name }}
+                                {% endif %}
+                                {% if person.year %} ({{ person.year }}){% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </section>
