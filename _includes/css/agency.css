@@ -1001,6 +1001,26 @@ a.team-member p.text-muted {
     color: #{{ site.data.template.color.muted }};
 }
 
+.team-member-detail {
+    transition: color 0.5s ease;
+}
+
+a.team-member .team-member-detail,
+.team-member .team-member-detail {
+    color: #{{ site.data.template.color.muted }};
+}
+
+.team-member:hover .team-member-detail,
+.team-member:focus .team-member-detail,
+.team-member:focus-within .team-member-detail {
+    color: #fff;
+}
+
+#team .section-heading {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
 #team-alumni {
     margin-top: 10px;
     text-align: center;

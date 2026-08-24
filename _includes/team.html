@@ -1,5 +1,5 @@
 <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
+    <section id="team" class="bg-darkest-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -24,8 +24,8 @@
                             {% endif %}
                         </div>
                         <h4>{{ member.name }}</h4>
-                        <p class="text-muted">{{ member.position }}</p>
-                        <p class="text-muted">{{ member.description }}</p>
+                        <p class="text-muted team-member-detail">{{ member.position }}</p>
+                        <p class="text-muted team-member-detail">{{ member.description }}</p>
                 {% endcapture %}
                 <div class="col-sm-4">
                     {% if member.website != blank %}

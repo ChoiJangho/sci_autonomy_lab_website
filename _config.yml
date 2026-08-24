@@ -20,7 +20,7 @@ people:
   description: "Humanoids, Robot Learning, Game Theory"
   website: ""
 - name: Mingke Lu
-  pic: mingke.jpeg
+  pic: mingke.jpg
   position: Ph.D. Student
   description: "Multi-Robot Systems, Robot Learning"
   website: ""
@@ -45,7 +45,7 @@ people:
   description: "Robot Design, Automatic Control"
   website: ""
 - name: Sean Liu
-  pic: sean.png
+  pic: sean.jpg
   position: Undergraduate Student
   description: "Multi-robot Systems, Decentralized Control, Robot Design"
   website: ""
