@@ -27,6 +27,9 @@
                                 {% if publication.paper_link and publication.paper_link != "#" %}
                                 <a href="{{ publication.paper_link }}" class="btn btn-primary btn-sm" target="_blank">paper</a>
                                 {% endif %}
+                                {% if publication.arxiv_link and publication.arxiv_link != "#" %}
+                                <a href="{{ publication.arxiv_link }}" class="btn btn-primary btn-sm" target="_blank">arxiv</a>
+                                {% endif %}                                
                                 {% if publication.video_link and publication.video_link != "" %}
                                 <a href="{{ publication.video_link }}" class="btn btn-primary btn-sm" target="_blank">video</a>
                                 {% endif %}
