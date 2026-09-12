@@ -929,6 +929,58 @@ section h3.section-subheading {
     border-radius: 3px;
 }
 
+.publication-video-thumb {
+    position: relative;
+    display: block;
+    margin-top: 4px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #111;
+}
+
+.publication-video-thumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.publication-video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    margin: -22px 0 0 -22px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    pointer-events: none;
+}
+
+.publication-video-play:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    margin: -7px 0 0 -5px;
+    border-style: solid;
+    border-width: 7px 0 7px 12px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.publication-video-thumb:hover img {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+    .publication-video-thumb {
+        margin-top: 16px;
+        max-width: 320px;
+    }
+}
+
 .publication-links {
     margin-top: 10px;
 }

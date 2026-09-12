@@ -14,12 +14,21 @@
                 <h4 class="publication-year">{{ category }}</h4>
                 
                 {% for publication in publications %}
+                {% assign youtube_id = "" %}
+                {% if publication.video_link and publication.video_link != "" and publication.video_link != "#" %}
+                    {% if publication.video_link contains "youtu.be/" %}
+                        {% assign youtube_id = publication.video_link | split: "youtu.be/" | last | split: "?" | first | split: "/" | first %}
+                    {% elsif publication.video_link contains "youtube.com/watch" %}
+                        {% assign youtube_id = publication.video_link | split: "v=" | last | split: "&" | first %}
+                    {% elsif publication.video_link contains "youtube.com/embed/" %}
+                        {% assign youtube_id = publication.video_link | split: "embed/" | last | split: "?" | first | split: "/" | first %}
+                    {% elsif publication.video_link contains "youtube.com/shorts/" %}
+                        {% assign youtube_id = publication.video_link | split: "shorts/" | last | split: "?" | first | split: "/" | first %}
+                    {% endif %}
+                {% endif %}
                 <div class="publication-item">
                     <div class="row">
-                        <!-- <div class="col-md-2">
-                            <img src="img/publications/placeholder.png" class="img-responsive publication-image" alt="{{ publication.title }}">
-                        </div> -->
-                        <div class="col-md-10">
+                        <div class="{% if youtube_id != "" %}col-md-8{% else %}col-md-12{% endif %}">
                             <h5 class="publication-title">{{ publication.title }}</h5>
                             <p class="publication-authors"><strong>{{ publication.authors }}</strong></p>
                             <p class="publication-venue">{{ publication.venue }}</p>
@@ -44,6 +53,14 @@
                                 {% endif %}
                             </div>
                         </div>
+                        {% if youtube_id != "" %}
+                        <div class="col-md-4">
+                            <a class="publication-video-thumb" href="{{ publication.video_link }}" target="_blank" rel="noopener" aria-label="Watch video for {{ publication.title }}">
+                                <img src="https://img.youtube.com/vi/{{ youtube_id }}/hqdefault.jpg" alt="Video thumbnail for {{ publication.title }}">
+                                <span class="publication-video-play" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
