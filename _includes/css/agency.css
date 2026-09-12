@@ -907,6 +907,7 @@ section h3.section-subheading {
     font-weight: 600;
     margin-bottom: 10px;
     line-height: 1.4;
+    text-transform: none;
 }
 
 .publication-authors {

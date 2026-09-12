@@ -23,6 +23,9 @@
                             <h5 class="publication-title">{{ publication.title }}</h5>
                             <p class="publication-authors"><strong>{{ publication.authors }}</strong></p>
                             <p class="publication-venue">{{ publication.venue }}</p>
+                            {% if publication.collaboration and publication.collaboration != "#" %}
+                            <p class="publication-venue">Collaboration with {{ publication.collaboration }}</p>
+                            {% endif %}
                             <div class="publication-links">
                                 {% if publication.paper_link and publication.paper_link != "#" %}
                                 <a href="{{ publication.paper_link }}" class="btn btn-primary btn-sm" target="_blank">paper</a>
