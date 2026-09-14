@@ -47,12 +47,12 @@
                     </button>
                 </h3>
                 <div id="team-alumni-panel" class="collapse">
-                    {% assign alumni_groups = "Ph.D. Students|alumni-phd,M.S. Students|alumni-ms,Undergraduate Students|alumni-undergrad,Visiting Students|alumni-visiting" | split: "," %}
+                    {% assign alumni_groups = "Ph.D. Students|phd,M.S. Students|ms,Undergraduate Students|undergrad,Visiting Students|visiting" | split: "," %}
                     {% for group in alumni_groups %}
                     {% assign group_parts = group | split: "|" %}
                     {% assign group_label = group_parts[0] %}
                     {% assign group_key = group_parts[1] %}
-                    {% assign group_people = site[group_key] %}
+                    {% assign group_people = site.data.alumni[group_key] %}
                     <div class="team-alumni-group">
                         <h4>{{ group_label }}</h4>
                         <ul>

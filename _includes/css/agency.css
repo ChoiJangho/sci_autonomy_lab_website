@@ -1133,6 +1133,7 @@ a.team-member .team-member-detail,
 #team-alumni {
     margin-top: 10px;
     text-align: center;
+    color: #fff;
 }
 
 .team-alumni-heading {
@@ -1143,7 +1144,7 @@ a.team-member .team-member-detail,
     background: none;
     border: 0;
     padding: 0;
-    color: inherit;
+    color: #fff;
     cursor: pointer;
     font-family: {{ site.data.template.font.primary }};
     font-size: 22px;
@@ -1153,7 +1154,7 @@ a.team-member .team-member-detail,
 
 .team-alumni-toggle:hover,
 .team-alumni-toggle:focus {
-    color: #{{ site.data.template.color.primary }};
+    color: #{{ site.data.template.color.primary-light }};
     outline: 0;
 }
 
@@ -1174,12 +1175,14 @@ a.team-member .team-member-detail,
     max-width: 640px;
     margin: 24px auto 0;
     text-align: left;
+    color: #fff;
 }
 
 .team-alumni-group h4 {
     margin: 22px 0 8px;
     text-transform: none;
     font-size: 16px;
+    color: #fff;
 }
 
 .team-alumni-group ul {
@@ -1193,6 +1196,18 @@ a.team-member .team-member-detail,
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
     font-weight: 400;
+    color: #fff;
+}
+
+.team-alumni-group a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.team-alumni-group a:hover,
+.team-alumni-group a:focus {
+    color: #{{ site.data.template.color.primary-light }};
+    text-decoration: underline;
 }
 
 aside.clients img {

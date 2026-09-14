@@ -7,20 +7,6 @@ email: your-email@domain.com
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
 
-alumni-phd: []
-
-alumni-ms: []
-
-alumni-undergrad:
-- name: Ryan Teoh
-  website: "https://land-dev.github.io/ryanteoh/"
-  year: 2026
-- name: Sanjit Sarda
-  website: "https://www.sanjitsarda.com/"
-  year: 2026
-
-alumni-visiting: []
-
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: github
