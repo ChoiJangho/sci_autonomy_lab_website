@@ -1,0 +1,66 @@
+# Current lab members
+- name: Jason J. Choi
+  pic: jason.jpg
+  position: Principal Investigator
+  description: "Assistant Professor, Department of Electrical and Computer Engineering"
+  website: "https://jay-choi.me/"
+- name: Gechen Qu
+  pic: gechen.jpg
+  position: Ph.D. Student
+  description: "Humanoids, Robot Learning, Game Theory"
+  website: ""
+- name: Mingke Lu
+  pic: mingke.jpg
+  position: Ph.D. Student
+  description: "Multi-Robot Systems, Robot Learning"
+  website: ""
+- name: Seunghyeon Lee
+  pic: seunghyeon.jpg
+  position: Ph.D. Student
+  description: "Safety for Robot Manipulation"
+  website: ""
+- name: Hee jean Kwon
+  pic: jean.jpg
+  position: Master Student
+  description: "Robotics, Safety-critical systems"
+  website: "https://www.linkedin.com/in/hee-jean-kwon/"
+- name: Jiandong Gu
+  pic: jiandong.jpg
+  position: Master Student
+  description: "Safety for Multi-Robot Systems, Reinforcement Learning"
+  website: "https://gjd2003.github.io/"
+- name: Yujie Rong
+  pic: yujie.jpg
+  position: Master Student
+  description: "Robot Design, Automatic Control"
+  website: ""
+- name: Sean Liu
+  pic: sean.jpg
+  position: Undergraduate Student
+  description: "Multi-robot Systems, Decentralized Control, Robot Design"
+  website: ""
+- name: Rui Yan
+  position: Undergraduate Student
+  description: "Multi-robot Collaborative Mobile Manipulation"
+  website: ""
+  pic: rui.jpg
+- name: Jessie Shu
+  pic: jessie.jpg
+  position: Undergraduate Student
+  description: "Robot Design, Mechanical Simulations, Aerodynamics"
+  website: ""
+- name: Joel Venegas
+  pic: joel.jpg
+  position: Undergraduate Student
+  description: "Robotics, Control systems, Astronautics"
+  website: ""
+- name: Chelsea Chen
+  pic: yichi.jpg
+  position: Undergraduate Student
+  description: "Robot Learning, Robot Manipulation, Policy Learning and Evaluation"
+  website: ""
+- name: Saanvi Suri
+  pic: saanvi.jpg
+  position: Undergraduate Student
+  description: "Applied Machine Learning, ML for Healthcare"
+  website: ""

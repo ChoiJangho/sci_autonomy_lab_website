@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="row team-members-row">
-                {% for member in site.people %}
+                {% for member in site.data.members %}
                 {% assign hover_pic = member.pic | replace: '.jpeg', '_original.jpeg' | replace: '.png', '_original.png' | replace: '.jpg', '_original.jpg' %}
                 {% assign hover_path = '/img/team/' | append: hover_pic %}
                 {% assign has_color = false %}
