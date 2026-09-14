@@ -1,0 +1,15 @@
+news:
+  "2026":
+    - title: "Our paper on ResSafe is accepted to Conference on Robot Learning (CoRL), 2026. Please visit [Publications](/publications) for more details."
+      month: "2026-09"
+    - title: "Our paper on [Time-To-Reach Separation and Safety Filtering for Safe, Fair, and Efficient Multi-Agent Coordination](https://arxiv.org/pdf/2605.20625) is accepted to IEEE Conference on Decision and Control (CDC), 2026."
+      month: "2026-07"
+    - title: "Our lab had a summer gathering and played Spikeball together!"
+      month: "2026-07"
+      pic: 2607_summer_gathering.jpg
+    - title: "Our lab attended [the 47th SoCal Control Workshop](https://socalcontrol.cms.caltech.edu/) at Caltech."
+      month: "2026-05"
+      pic: 2605_socal_workshop.jpg
+    - title: "Our lab had a student-organized ROS2 workshop, and learned how to use ROS2 for our research."
+      month: "2026-02"
+      pic: 2602_ros2_workshop.jpeg

@@ -1,0 +1,58 @@
+---
+layout: page
+title: Gallery & News
+---
+<section id="gallery-news">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="news-heading">News & Gallery</h2>
+                {% assign all_news = "" | split: "" %}
+                {% for year_group in site.data.news.news %}
+                    {% for item in year_group[1] %}
+                        {% assign all_news = all_news | push: item %}
+                    {% endfor %}
+                {% endfor %}
+                {% assign news_by_month = all_news | group_by: "month" | sort: "name" | reverse %}
+                <ul class="news-list">
+                    {% for month_group in news_by_month %}
+                    {% assign month_items = month_group.items | sort: "title" %}
+                    {% assign month_parts = month_group.name | split: "-" %}
+                    {% assign year = month_parts[0] %}
+                    {% assign month_num = month_parts[1] %}
+                    {% case month_num %}
+                        {% when "01" %}{% assign month_label = "Jan" %}
+                        {% when "02" %}{% assign month_label = "Feb" %}
+                        {% when "03" %}{% assign month_label = "Mar" %}
+                        {% when "04" %}{% assign month_label = "Apr" %}
+                        {% when "05" %}{% assign month_label = "May" %}
+                        {% when "06" %}{% assign month_label = "Jun" %}
+                        {% when "07" %}{% assign month_label = "Jul" %}
+                        {% when "08" %}{% assign month_label = "Aug" %}
+                        {% when "09" %}{% assign month_label = "Sep" %}
+                        {% when "10" %}{% assign month_label = "Oct" %}
+                        {% when "11" %}{% assign month_label = "Nov" %}
+                        {% when "12" %}{% assign month_label = "Dec" %}
+                        {% else %}{% assign month_label = month_num %}
+                    {% endcase %}
+                    {% for item in month_items %}
+                    {% capture link_prefix %}]({{ site.baseurl }}/{% endcapture %}
+                    {% assign news_title = item.title | replace: "](/", link_prefix %}
+                    <li class="news-item">
+                        <div class="news-entry">
+                            <span class="news-date">{{ month_label }} {{ year }}</span>
+                            <span class="news-text">{{ news_title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+                        </div>
+                        {% if item.pic and item.pic != "" %}
+                        <div class="news-image">
+                            <img src="{{ site.baseurl }}/img/gallery/{{ item.pic }}" alt="">
+                        </div>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
