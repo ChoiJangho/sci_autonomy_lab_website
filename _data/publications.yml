@@ -5,7 +5,7 @@ publications:
     - title: "ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids"
       authors: "G. Qu, T. Zhang, B. Zhang, Y. Wang, K. Sreenath, C. Tomlin, & J. J. Choi"
       venue: "Accepted to Conference on Robot Learning (CoRL), 2026"
-      arxiv_link: ""
+      arxiv_link: "https://arxiv.org/pdf/2609.15988"
       video_link: "https://youtu.be/d0fd1yWgbBI"
       code_link: ""
       webpage: "https://qugechen.github.io/ResSafe/"
@@ -18,7 +18,7 @@ publications:
       video_link: ""
       code_link: ""
       webpage: ""
-      collaboration: "UC Berkeley, UPenn, MIT"
+      collaboration: "UC Berkeley, UPenn, and MIT"
 
     - title: "Robust Direct Data-Driven Hamiltonian for Safe Set Computation under Measurement Noise and Disturbances"
       authors: "M. Bajelani, C. A. Strong, C. J. Tomlin, J. J. Choi, & K. van Heusden"
@@ -27,7 +27,7 @@ publications:
       video_link: ""
       code_link: ""
       webpage: ""
-      collaboration: "UC Berkeley, UBC"
+      collaboration: "UC Berkeley and UBC"
 
   "2026":
     - title: "Whole-Body Bilateral Teleoperation with Multi-Stage Object Parameter Estimation for Wheeled Humanoid Locomanipulation"
@@ -55,7 +55,7 @@ publications:
       paper_link: "https://ieeexplore.ieee.org/abstract/document/11616314"
       arxiv_link: "https://arxiv.org/abs/2509.24226"
       video_link: ""
-      code_link: ""
+      code_link: "https://github.com/ChoiJangho/min_phase_cbf"
       webpage: ""
 
   "2025":
