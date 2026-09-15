@@ -8,7 +8,7 @@ publications:
       arxiv_link: "https://arxiv.org/pdf/2609.15988"
       video_link: "https://youtu.be/d0fd1yWgbBI"
       code_link: ""
-      webpage: "https://qugechen.github.io/ResSafe/"
+      webpage: "https://sciautonomy.github.io/ResSafe_Web/"
       collaboration: "UC Berkeley"
 
     - title: "Time-To-Reach Separation and Safety Filtering for Safe, Fair, and Efficient Multi-Agent Coordination"
