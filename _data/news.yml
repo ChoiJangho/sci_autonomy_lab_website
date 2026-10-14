@@ -1,5 +1,8 @@
 news:
   "2026":
+    - title: "Our lab held its first lab demo day! Students who have been working in our lab over the summer presented their work on topics including data-driven Hamilton–Jacobi reachability, time-optimal navigation for urban air taxis, safe robot manipulation and navigation, and humanoid safety filtering."
+      month: "2026-10"
+      pic: 2610_lab_demo.jpg
     - title: "Our paper [ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids](https://arxiv.org/pdf/2609.15988) is accepted to Conference on Robot Learning (CoRL), 2026. Please visit [Publications](/publications) for more details."
       month: "2026-09"
     - title: "Our paper on [Time-To-Reach Separation and Safety Filtering for Safe, Fair, and Efficient Multi-Agent Coordination](https://arxiv.org/pdf/2605.20625) is accepted to IEEE Conference on Decision and Control (CDC), 2026."
