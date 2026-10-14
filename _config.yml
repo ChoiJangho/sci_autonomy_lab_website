@@ -6,6 +6,14 @@ title: SCI Autonomy
 email: your-email@domain.com
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
+# Header background: slideshow | image | video
+# - slideshow: cycles through files in img/headers/
+# - image: uses header.image (path relative to site root)
+# - video: uses header.video (path relative to site root)
+header:
+  mode: slideshow
+  image: img/headers/marl.png
+  video: img/headers/ressafe_banner.mp4
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:

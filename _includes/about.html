@@ -1,6 +1,19 @@
     <!-- Header -->
     <header>
-        <div class="header-slideshow" aria-hidden="true">
+        {% assign header_mode = site.header.mode | default: "slideshow" %}
+        <div class="header-slideshow" data-header-mode="{{ header_mode }}" aria-hidden="true">
+            {% if header_mode == "image" %}
+            <div class="header-slide is-active" data-slide-type="image">
+                <img src="{{ site.header.image | prepend: '/' | replace: '//', '/' | prepend: site.baseurl }}" alt="">
+            </div>
+            {% elsif header_mode == "video" %}
+            {% assign video_ext = site.header.video | split: '.' | last | downcase %}
+            <div class="header-slide is-active" data-slide-type="video">
+                <video muted playsinline loop autoplay preload="metadata">
+                    <source src="{{ site.header.video | prepend: '/' | replace: '//', '/' | prepend: site.baseurl }}" type="video/{{ video_ext }}">
+                </video>
+            </div>
+            {% else %}
             {% assign header_media = site.static_files | where_exp: "f", "f.path contains '/img/headers/'" | sort: "name" %}
             {% assign header_slide_started = false %}
             {% for media in header_media %}
@@ -19,6 +32,7 @@
             {% assign header_slide_started = true %}
             {% endif %}
             {% endfor %}
+            {% endif %}
         </div>
         <div class="header-slideshow-overlay"></div>
         <div class="container">
