@@ -34,14 +34,24 @@
   position: Master Student
   description: "Robot Design, Automatic Control"
   website: ""
+- name: Mintaek Oh
+  pic: mintaek.jpeg
+  position: Visiting Ph.D. Student
+  description: "Language-guided robot autonomy"
+  website: ""
+- name: Dohyeok Kwon
+  pic: dohyeok.jpeg
+  position: Visiting Master Student
+  description: "Multi-Agent Learning"
+  website: ""
 - name: Sean Liu
   pic: sean.jpg
   position: Undergraduate Student
-  description: "Multi-robot Systems, Decentralized Control, Robot Design"
+  description: "Multi-Robot Systems, Decentralized Control, Robot Design"
   website: ""
 - name: Rui Yan
   position: Undergraduate Student
-  description: "Multi-robot Collaborative Mobile Manipulation"
+  description: "Multi-Robot Systems, Robot Perception"
   website: ""
   pic: rui.jpg
 - name: Jessie Shu
@@ -63,4 +73,9 @@
   pic: saanvi.jpg
   position: Undergraduate Student
   description: "Applied Machine Learning, ML for Healthcare"
+  website: ""
+- name: Zach Liu
+  pic: zach.jpeg
+  position: Undergraduate Student
+  description: "Data-driven and learning-based control, Data-driven safety analysis"
   website: ""
