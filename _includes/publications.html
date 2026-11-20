@@ -14,21 +14,37 @@
                 <h4 class="publication-year">{{ category }}</h4>
                 
                 {% for publication in publications %}
+                {% assign media_value = publication.media | default: "" %}
+                {% assign media_type = "" %}
                 {% assign youtube_id = "" %}
-                {% if publication.video_link and publication.video_link != "" and publication.video_link != "#" %}
-                    {% if publication.video_link contains "youtu.be/" %}
-                        {% assign youtube_id = publication.video_link | split: "youtu.be/" | last | split: "?" | first | split: "/" | first %}
-                    {% elsif publication.video_link contains "youtube.com/watch" %}
-                        {% assign youtube_id = publication.video_link | split: "v=" | last | split: "&" | first %}
-                    {% elsif publication.video_link contains "youtube.com/embed/" %}
-                        {% assign youtube_id = publication.video_link | split: "embed/" | last | split: "?" | first | split: "/" | first %}
-                    {% elsif publication.video_link contains "youtube.com/shorts/" %}
-                        {% assign youtube_id = publication.video_link | split: "shorts/" | last | split: "?" | first | split: "/" | first %}
+                {% assign media_image = "" %}
+                {% if media_value != "" and media_value != "#" %}
+                    {% if media_value contains "://" or media_value contains "http://" or media_value contains "https://" %}
+                        {% assign media_type = "video" %}
+                        {% if media_value contains "youtu.be/" %}
+                            {% assign youtube_id = media_value | split: "youtu.be/" | last | split: "?" | first | split: "/" | first %}
+                        {% elsif media_value contains "youtube.com/watch" %}
+                            {% assign youtube_id = media_value | split: "v=" | last | split: "&" | first %}
+                        {% elsif media_value contains "youtube.com/embed/" %}
+                            {% assign youtube_id = media_value | split: "embed/" | last | split: "?" | first | split: "/" | first %}
+                        {% elsif media_value contains "youtube.com/shorts/" %}
+                            {% assign youtube_id = media_value | split: "shorts/" | last | split: "?" | first | split: "/" | first %}
+                        {% endif %}
+                    {% else %}
+                        {% assign media_ext = media_value | split: "." | last | downcase %}
+                        {% if media_ext == "png" or media_ext == "jpg" or media_ext == "jpeg" or media_ext == "webp" or media_ext == "gif" %}
+                            {% assign media_type = "image" %}
+                            {% assign media_image = media_value %}
+                        {% endif %}
                     {% endif %}
+                {% endif %}
+                {% assign has_media_thumb = false %}
+                {% if youtube_id != "" or media_type == "image" %}
+                    {% assign has_media_thumb = true %}
                 {% endif %}
                 <div class="publication-item">
                     <div class="row">
-                        <div class="{% if youtube_id != "" %}col-md-8{% else %}col-md-12{% endif %}">
+                        <div class="{% if has_media_thumb %}col-md-8{% else %}col-md-12{% endif %}">
                             <h5 class="publication-title">{{ publication.title }}</h5>
                             <p class="publication-authors"><strong>{{ publication.authors }}</strong></p>
                             <p class="publication-venue">{{ publication.venue }}</p>
@@ -41,9 +57,9 @@
                                 {% endif %}
                                 {% if publication.arxiv_link and publication.arxiv_link != "#" %}
                                 <a href="{{ publication.arxiv_link }}" class="btn btn-primary btn-sm" target="_blank">arxiv</a>
-                                {% endif %}                                
-                                {% if publication.video_link and publication.video_link != "" %}
-                                <a href="{{ publication.video_link }}" class="btn btn-primary btn-sm" target="_blank">video</a>
+                                {% endif %}
+                                {% if media_type == "video" %}
+                                <a href="{{ media_value }}" class="btn btn-primary btn-sm" target="_blank">video</a>
                                 {% endif %}
                                 {% if publication.code_link and publication.code_link != "" %}
                                 <a href="{{ publication.code_link }}" class="btn btn-primary btn-sm" target="_blank">code</a>
@@ -55,10 +71,16 @@
                         </div>
                         {% if youtube_id != "" %}
                         <div class="col-md-4">
-                            <a class="publication-video-thumb" href="{{ publication.video_link }}" target="_blank" rel="noopener" aria-label="Watch video for {{ publication.title }}">
+                            <a class="publication-media-thumb publication-video-thumb" href="{{ media_value }}" target="_blank" rel="noopener" aria-label="Watch video for {{ publication.title }}">
                                 <img src="https://img.youtube.com/vi/{{ youtube_id }}/hqdefault.jpg" alt="Video thumbnail for {{ publication.title }}">
                                 <span class="publication-video-play" aria-hidden="true"></span>
                             </a>
+                        </div>
+                        {% elsif media_type == "image" %}
+                        <div class="col-md-4">
+                            <div class="publication-media-thumb publication-image-thumb">
+                                <img src="{{ site.baseurl }}/img/publications/{{ media_image }}" alt="{{ publication.title }}">
+                            </div>
                         </div>
                         {% endif %}
                     </div>

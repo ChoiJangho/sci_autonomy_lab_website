@@ -1,48 +1,51 @@
 # Publications data file
 publications:
   preprints:
-    - title: "Data-Driven Hamiltonian for Neural Optimal Control"
-      authors: "C. A. Strong, A. Surya, N. Cho, J. J. Choi, & C. J. Tomlin"
-      venue: "arXiv preprint arXiv:2610.36378"
-      arxiv_link: "https://arxiv.org/abs/2610.36378"
-      video_link: ""
+    - title: "Data-Driven Hamiltonian Under Parametric Uncertainty"
+      authors: "Z. Liu, N. Cho, & J. J. Choi"
+      venue: "arXiv preprint arXiv:2611.25356"
+      arxiv_link: "http://arxiv.org/abs/2611.25356"
+      media: "26_parametric_ddh.png"
       code_link: ""
       webpage: ""
-      collaboration: "UC Berkeley and Seoul National University"
-
+      collaboration: "Seoul National University"
+      
     - title: "Non-Myopic Safety Filtering with Learned Intervention Cost-to-Go"
       authors: "J. Autenrieb, M. Spiller, D. Silvestre, N. Cho, & J. J. Choi"
       venue: "arXiv preprint arXiv:2611.21036"
       arxiv_link: "https://arxiv.org/abs/2611.21036"
-      video_link: ""
+      media: "26_nonmyopic.png"
       code_link: ""
       webpage: ""
       collaboration: "German Aerospace Center (DLR), NOVA School of Science and Technology, and Seoul National University"
+
+    - title: "Data-Driven Hamiltonian for Neural Optimal Control"
+      authors: "C. A. Strong, A. Surya, N. Cho, J. J. Choi, & C. J. Tomlin"
+      venue: "arXiv preprint arXiv:2610.36378"
+      arxiv_link: "https://arxiv.org/abs/2610.36378"
+      media: ""
+      code_link: ""
+      webpage: ""
+      collaboration: "UC Berkeley and Seoul National University"
+
 
     - title: "Robust Direct Data-Driven Hamiltonian for Safe Set Computation under Measurement Noise and Disturbances"
       authors: "M. Bajelani, C. A. Strong, C. J. Tomlin, J. J. Choi, & K. van Heusden"
       venue: "arXiv preprint arXiv:2606.17292"
       arxiv_link: "https://arxiv.org/pdf/2606.17292"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
       collaboration: "UC Berkeley and UBC"
 
-    - title: "Data-Driven Hamiltonian Under Parametric Uncertainty"
-      authors: "Z. Liu, N. Cho, & J. J. Choi"
-      venue: "arXiv preprint arXiv"
-      arxiv_link: ""
-      video_link: ""
-      code_link: ""
-      webpage: ""
-      collaboration: "Seoul National University"
+
 
   "2026":
     - title: "Unified Overview of Safety Certificate Functions: Techniques from Hamilton--Jacobi Reachability and Control Barrier Functions"
       authors: "H. Wang, M. Cohen, Z. Feng, D. Oh, O. So, S. Zhang, J. Borquez, C. Fan, J. F. Fisac, H. Hu, J. J. Choi, & S. Bansal"
       venue: "IEEE Conference on Decision and Control (CDC), 2026"
       arxiv_link: "https://arxiv.org/pdf/2611.07537"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
       collaboration: "Stanford, University of Southern California, North Carolina State University, , Universidad de Santiago de Chile, Johns Hopkins University, Princeton, and MIT"
@@ -51,7 +54,7 @@ publications:
       authors: "M. Low, J. J. Aloor, V. M. Tuck, P. Nuzzo, & J. J. Choi"
       venue: "IEEE Conference on Decision and Control (CDC), 2026"
       arxiv_link: "https://arxiv.org/pdf/2605.20625"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
       collaboration: "UC Berkeley, UPenn, and MIT"
@@ -60,7 +63,7 @@ publications:
       authors: "G. Qu, T. Zhang, B. Zhang, Y. Wang, K. Sreenath, C. Tomlin, & J. J. Choi"
       venue: "Conference on Robot Learning (CoRL) Spotlight, 2026"
       arxiv_link: "https://arxiv.org/pdf/2609.15988"
-      video_link: "https://youtu.be/d0fd1yWgbBI"
+      media: "https://youtu.be/d0fd1yWgbBI"
       code_link: ""
       webpage: "https://sciautonomy.github.io/ResSafe_Web/"
       collaboration: "UC Berkeley"
@@ -70,7 +73,7 @@ publications:
       venue: "Accepted to IEEE Transactions on Robotics, 2026"
       paper_link: "https://ieeexplore.ieee.org/abstract/document/11644297"
       arxiv_link: "https://arxiv.org/abs/2508.09846"
-      video_link: "https://youtu.be/XPy7mNTQBlE?si=exKWwM0sZLZ4CBHV"
+      media: "https://youtu.be/XPy7mNTQBlE?si=exKWwM0sZLZ4CBHV"
       code_link: ""
       webpage: ""
       collaboration: "UIUC"
@@ -80,7 +83,7 @@ publications:
       venue: "Accepted to IEEE Transactions on Automatic Control, 2026"
       arxiv_link: "https://ieeexplore.ieee.org/abstract/document/11636292"
       paper_link: "https://arxiv.org/abs/2508.07684"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -89,7 +92,7 @@ publications:
       venue: "American Control Conference (ACC), 2026"
       paper_link: "https://ieeexplore.ieee.org/abstract/document/11616314"
       arxiv_link: "https://arxiv.org/abs/2509.24226"
-      video_link: ""
+      media: ""
       code_link: "https://github.com/ChoiJangho/min_phase_cbf"
       webpage: ""
 
@@ -98,7 +101,7 @@ publications:
       authors: "J. J. Choi*, F. Castaneda*, W. Jung*, B. Zhang, C. J. Tomlin, & K. Sreenath"
       venue: "IEEE Transactions on Robotics, 2025"
       paper_link: "https://arxiv.org/abs/2311.13824"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -106,7 +109,7 @@ publications:
       authors: "J. J. Choi*, C. A. Strong*, K. Sreenath, N. Cho & C. J. Tomlin"
       venue: "IEEE Conference on Decision and Control, 2025"
       paper_link: "https://arxiv.org/abs/2504.03233"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -114,7 +117,7 @@ publications:
       authors: "J. J. Choi*, J. J. Aloor*, J. Li*, M. G. Mendoza, H. Balakrishnan, & C. J. Tomlin"
       venue: "Robotics: Science and Systems (RSS), 2025"
       paper_link: "https://arxiv.org/pdf/2505.02293"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -122,7 +125,7 @@ publications:
       authors: "F. Castaneda*, J. J. Choi*, W. Jung, B. Zhang, C. J. Tomlin, & K. Sreenath"
       venue: "Accepted to IEEE Open Journal of Control System (OJ-CSYS) (Special Section: Intersection of Machine Learning with Control), 2025"
       paper_link: "https://arxiv.org/abs/2208.10733"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -131,7 +134,7 @@ publications:
       authors: "X. Xia*, J. J. Choi*, A. Agrawal, K. Sreenath, C. J. Tomlin, & S. Bansal"
       venue: "IEEE CDC, 2024"
       paper_link: "https://ieeexplore.ieee.org/document/10886562"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -139,7 +142,7 @@ publications:
       authors: "W. Lavanakul*, J. J. Choi*, K. Sreenath, & C. J. Tomlin"
       venue: "Annual Learning for Dynamics & Control Conference (L4DC), 2024"
       paper_link: "https://proceedings.mlr.press/v242/lavanakul24a/lavanakul24a.pdf"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -148,7 +151,7 @@ publications:
       authors: "T. Hsu, J. J. Choi, D. Amin, C. J. Tomlin, S. C. McWherter, & M. Piedmonte"
       venue: "Journal of the American Helicopter Society (JAHS), 2023"
       paper_link: "https://www.ingentaconnect.com/content/ahs/jahs/2024/00000069/00000002/art00003"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -156,7 +159,7 @@ publications:
       authors: "K. P. Wabersich*, A. J. Taylor*, J. J. Choi*, K. Sreenath, C. J. Tomlin, A. D. Ames, & M. N. Zeilinger"
       venue: "IEEE Control Systems Magazine (CSM), 2023"
       paper_link: "https://ieeexplore.ieee.org/abstract/document/10266799"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -164,7 +167,7 @@ publications:
       authors: "J. J. Choi, A. Agrawal, K. Sreenath, C. J. Tomlin, & S. Bansal"
       venue: "IEEE Robotics & Automation Letters (RA-L) (presented at ICRA 2022), 2022"
       paper_link: "https://arxiv.org/abs/2201.08538"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -172,7 +175,7 @@ publications:
       authors: "K. Kang, P. Gradu, J. J. Choi, M. Janner, C. Tomlin, & S. Levine"
       venue: "International Conf. on Machine Learning (ICML), 2022 (Acceptance rate: 22%)"
       paper_link: "https://proceedings.mlr.press/v162/kang22a/kang22a.pdf"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -180,7 +183,7 @@ publications:
       authors: "J. J. Choi, D. Lee, K. Sreenath, C. J. Tomlin, & S. Herbert"
       venue: "IEEE CDC, 2021"
       paper_link: "https://arxiv.org/abs/2104.02808"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -188,7 +191,7 @@ publications:
       authors: "F. Castaneda*, J. J. Choi*, B. Zhang, C. J. Tomlin, & K. Sreenath"
       venue: "IEEE Conference on Decision and Control (CDC), 2021"
       paper_link: "https://arxiv.org/abs/2106.07108"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -196,7 +199,7 @@ publications:
       authors: "S. Herbert*, J. J. Choi*, S. Sanjeev, M. Gibson, K. Sreenath, & C. J. Tomlin"
       venue: "IEEE International Conference on Robotics and Automation (ICRA), 2021"
       paper_link: "https://ieeexplore.ieee.org/abstract/document/9561561"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -204,7 +207,7 @@ publications:
       authors: "F. Castaneda*, J. J. Choi*, B. Zhang, C. J. Tomlin, & K. Sreenath"
       venue: "American Control Conference (ACC), 2021"
       paper_link: "https://ieeexplore.ieee.org/document/9483420"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -212,7 +215,7 @@ publications:
       authors: "J. J. Choi*, F. Castaneda*, C. J. Tomlin, & K. Sreenath"
       venue: "Robotics: Science and Systems (RSS), 2020 (Acceptance rate: 32%)"
       paper_link: "https://www.roboticsproceedings.org/rss16/p088.pdf"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""
 
@@ -220,6 +223,6 @@ publications:
       authors: "H. Ku*, J. J. Choi*, S. Jang*, W. Do*, S. Lee, & S. Seok"
       venue: "International Conference on Ubiquitous Robots (UR), 2019"
       paper_link: "https://ieeexplore.ieee.org/document/8768706"
-      video_link: ""
+      media: ""
       code_link: ""
       webpage: ""

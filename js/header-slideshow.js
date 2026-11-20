@@ -3,10 +3,12 @@
     var slideshow = document.querySelector('.header-slideshow');
     if (!slideshow) return;
 
+    var mode = slideshow.getAttribute('data-header-mode') || 'slideshow';
     var slides = Array.prototype.slice.call(slideshow.querySelectorAll('.header-slide'));
     if (!slides.length) return;
 
-    if (slides.length === 1) {
+    // Single image / single video: no slideshow cycling
+    if (mode === 'image' || mode === 'video' || slides.length === 1) {
         var onlyVideo = slideshow.querySelector('.header-slide[data-slide-type="video"] video');
         if (onlyVideo) {
             onlyVideo.muted = true;

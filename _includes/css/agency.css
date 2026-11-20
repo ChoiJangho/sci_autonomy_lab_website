@@ -929,6 +929,7 @@ section h3.section-subheading {
     border-radius: 3px;
 }
 
+.publication-media-thumb,
 .publication-video-thumb {
     position: relative;
     display: block;
@@ -938,12 +939,22 @@ section h3.section-subheading {
     background: #111;
 }
 
+.publication-media-thumb img,
 .publication-video-thumb img {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.publication-image-thumb img {
+    aspect-ratio: auto;
+    max-height: 180px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 .publication-video-play {
@@ -969,12 +980,14 @@ section h3.section-subheading {
     border-color: transparent transparent transparent #fff;
 }
 
+.publication-media-thumb:hover img,
 .publication-video-thumb:hover img {
     transform: scale(1.03);
     opacity: 0.9;
 }
 
 @media (max-width: 991px) {
+    .publication-media-thumb,
     .publication-video-thumb {
         margin-top: 16px;
         max-width: 320px;
