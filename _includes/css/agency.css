@@ -976,6 +976,13 @@ section h3.section-subheading {
     aspect-ratio: auto;
 }
 
+.publication-image-thumb {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    cursor: zoom-in;
+}
+
 .publication-image-thumb img {
     aspect-ratio: auto;
     max-height: 180px;
@@ -983,6 +990,36 @@ section h3.section-subheading {
     max-width: 100%;
     margin: 0 auto;
     object-fit: contain;
+}
+
+.publication-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: zoom-out;
+}
+
+.publication-lightbox[hidden] {
+    display: none !important;
+}
+
+.publication-lightbox img {
+    display: block;
+    max-width: min(96vw, 1400px);
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+body.publication-lightbox-open {
+    overflow: hidden;
 }
 
 .publication-item.has-media .publication-image-thumb img {

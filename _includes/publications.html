@@ -78,9 +78,9 @@
                         </div>
                         {% elsif media_type == "image" %}
                         <div class="col-md-4">
-                            <div class="publication-media-thumb publication-image-thumb">
+                            <button type="button" class="publication-media-thumb publication-image-thumb" data-lightbox-src="{{ site.baseurl }}/img/publications/{{ media_image }}" data-lightbox-alt="{{ publication.title }}" aria-label="Enlarge image for {{ publication.title }}">
                                 <img src="{{ site.baseurl }}/img/publications/{{ media_image }}" alt="{{ publication.title }}">
-                            </div>
+                            </button>
                         </div>
                         {% endif %}
                     </div>
@@ -91,3 +91,6 @@
         </div>
     </div>
 </section>
+<div id="publication-lightbox" class="publication-lightbox" hidden>
+    <img src="" alt="">
+</div>
