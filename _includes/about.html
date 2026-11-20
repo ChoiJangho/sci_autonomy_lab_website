@@ -42,6 +42,20 @@
                     We develop the foundations of safe autonomy and scale them to enable reliable collective autonomy.
                     More broadly, we study the science of intelligence for embodied autonomous systems.
                 </p>
+                <ul class="list-inline intro-social">
+                    {% assign intro_social_order = "youtube,linkedin" | split: "," %}
+                    {% for social_name in intro_social_order %}
+                    {% for network in site.social %}
+                    {% if network.title == social_name %}
+                    <li>
+                        <a href="{{ network.url }}" target="_blank" rel="noopener" aria-label="{{ network.title }}">
+                            <i class="fa fa-{{ network.title }}"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </header>

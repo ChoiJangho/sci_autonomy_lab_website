@@ -380,6 +380,36 @@ header .intro-text .intro-description a:focus {
     color: #{{ site.data.template.color.primary-light }};
 }
 
+header .intro-social {
+    margin: 42px 0 0;
+    padding: 0;
+}
+
+header .intro-social li {
+    margin: 0 16px;
+}
+
+header .intro-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 32px;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+header .intro-social a:hover,
+header .intro-social a:focus {
+    background: #fff;
+    border-color: #fff;
+    color: #{{ site.data.template.color.primary }};
+}
+
 @media(min-width:768px) {
     header {
         height: auto;
