@@ -42,7 +42,7 @@
                 {% if youtube_id != "" or media_type == "image" %}
                     {% assign has_media_thumb = true %}
                 {% endif %}
-                <div class="publication-item">
+                <div class="publication-item{% if has_media_thumb %} has-media{% endif %}">
                     <div class="row">
                         <div class="{% if has_media_thumb %}col-md-8{% else %}col-md-12{% endif %}">
                             <h5 class="publication-title">{{ publication.title }}</h5>
