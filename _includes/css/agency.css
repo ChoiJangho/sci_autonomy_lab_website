@@ -545,6 +545,206 @@ section h3.section-subheading {
     }
 }
 
+#research_themes {
+    overflow: hidden;
+}
+
+.research-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px 20px;
+}
+
+.research-carousel-viewport {
+    overflow: hidden;
+    padding: 12px 0 28px;
+}
+
+.research-carousel-track {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    width: max-content;
+    transform: translateX(0);
+    transition: transform 0.45s ease;
+    will-change: transform;
+}
+
+.research-card {
+    flex: 0 0 min(78vw, 340px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    opacity: 0.35;
+    transform: scale(0.92);
+    transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+    text-align: left;
+}
+
+.research-card.is-adjacent {
+    opacity: 0.55;
+    transform: scale(0.96);
+}
+
+.research-card.is-active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+    cursor: default;
+}
+
+.research-card-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #111;
+    overflow: hidden;
+}
+
+.research-card-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.research-card-media-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #{{ site.data.template.color.primary }};
+    color: #fff;
+    text-align: center;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: none;
+}
+
+.research-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px 18px 20px;
+    min-height: 170px;
+}
+
+.research-card-title {
+    margin: 0;
+    text-transform: none;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #{{ site.data.template.color.secondary-dark }};
+}
+
+.research-card-text {
+    margin: 0;
+    flex: 1 1 auto;
+    font-family: {{ site.data.template.font.secondary }};
+    font-size: 14px;
+    line-height: 1.55;
+    color: #{{ site.data.template.color.muted }};
+}
+
+.research-card-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 13px;
+    font-weight: 700;
+    color: #{{ site.data.template.color.primary }};
+    text-decoration: none;
+}
+
+.research-card-link:hover,
+.research-card-link:focus {
+    color: #{{ site.data.template.color.primary-light }};
+    text-decoration: underline;
+}
+
+.research-card-link:before {
+    content: "\25BA";
+    margin-right: 6px;
+}
+
+.research-carousel-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-right: 4px;
+}
+
+.research-carousel-btn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: #fff;
+    color: #{{ site.data.template.color.secondary-dark }};
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.research-carousel-btn:hover,
+.research-carousel-btn:focus {
+    border-color: #{{ site.data.template.color.primary }};
+    color: #{{ site.data.template.color.primary }};
+    outline: 0;
+}
+
+.research-carousel-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+@media (min-width: 768px) {
+    .research-card {
+        flex-basis: 380px;
+    }
+
+    .research-card-body {
+        min-height: 180px;
+        padding: 20px 22px 22px;
+    }
+
+    .research-card-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .research-carousel {
+        padding: 0 8px 10px;
+    }
+
+    .research-card {
+        flex-basis: min(86vw, 300px);
+        border-radius: 18px;
+    }
+
+    .research-card-body {
+        min-height: 150px;
+        padding: 14px 14px 16px;
+    }
+
+    .research-card-title {
+        font-size: 17px;
+    }
+
+    .research-card-media-cta {
+        font-size: 22px;
+    }
+}
+
 .timeline {
     position: relative;
     padding: 0;

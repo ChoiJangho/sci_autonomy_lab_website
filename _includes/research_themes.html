@@ -1,4 +1,4 @@
-<!-- About Section -->
+<!-- Research Themes Section -->
     <section id="research_themes">
         <div class="container">
             <div class="row">
@@ -7,112 +7,78 @@
                     <h3 class="section-subheading text-muted">Below topics are the areas we are actively working on.</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image timeline-image-zoomed2">
-                                <img class="img-circle img-responsive" src="img/topics/dubins_car_q_learning.gif" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Control Theory for Safety</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Classical control-theoretic analysis provides safety assurance when mathematical assumptions and models hold. 
-                                        We extend these analytical tools to settings where unmodeled effects come into play, such as disturbances, other agents with uncertain intent, and measurement errors. 
-                                        In addition, we study how to effectively balance safety, performance, and learning objectives.</p>
-                                </div>
-                                <div>
-                                    <a class="timeline-example-publication" href="https://arxiv.org/pdf/2508.07684">Most Recent Publication</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image timeline-image-zoomed">
-                                <img class="img-circle img-responsive" src="img/topics/ddh.gif" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Data-driven & Learning-enabled Safety Frameworks</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">We aim to provide modular safety assurance mechanisms that leverage trajectory data to construct and update safety constraints. 
-                                        These frameworks enable generalizable design methodologies across diverse systems, and building on control theory and statistical learning, deliver provable robustness against model errors, disturbances, and uncertainties.</p>
-                                </div>
-                                <div>
-                                    <a class="timeline-example-publication" href="https://arxiv.org/pdf/2504.03233">Most Recent Publication</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/topics/marl.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Learning-enabled Multi-Agent Decision Making Frameworks</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">As individual robotic capabilities advance, the next major challenge is enabling effective coordination among multiple robots and humans.
-                                        We develop frameworks that support decentralized, coordinated behaviors across many agents, leveraging approaches such as multi-agent reinforcement learning (MARL) and game theory.</p>
-                                </div>
-                                <div>
-                                    <a class="timeline-example-publication" href="https://arxiv.org/pdf/2505.02293">Most Recent Publication</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/aam.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Decision Making Architecture for Advance Air Mobility</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Future dense air operations will create tightly coupled interactions across multiple decision-making levels. 
-                                        For example, trajectory planning must account for vehicle-specific health conditions (e.g., battery charge level) and dynamic capabilities (e.g., maximum yaw rate), while simultaneously adapting to fluctuating user demand. 
-                                        We aim to develop methods that deliver system-level safety guarantees for next-generation AAM systems, addressing their multi-level objectives, constraints, and complexities.</p>
-                                </div>
-                                <div>
-                                    <a class="timeline-example-publication" href="https://arxiv.org/pdf/2605.20625">Most Recent Publication</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/robotics.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Mobile Manipulation & Multi-Robot Teamwork</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">We envision teams of mobile manipulators coordinating to transport and assemble objects in a decentralized fashion to achieve large-scale assembly and construction tasks. 
-                                        This vision encompasses a wide range of challenging problems, including task allocation, long-horizon planning, collision-free coordination, and effective communication.</p>
-                                </div>
-                                <div>
-                                    <a class="timeline-example-publication" href="" onclick="return false;">Coming Soon</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Choose your 
-                                    <br>own idea!</h4>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading"></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted"></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+        </div>
+        <div class="research-carousel" data-research-carousel>
+            <div class="research-carousel-viewport">
+                <div class="research-carousel-track">
+                    <article class="research-card is-active">
+                        <div class="research-card-media">
+                            <img src="{{ site.baseurl }}/img/topics/dubins_car_q_learning.gif" alt="Control Theory for Safety">
+                        </div>
+                        <div class="research-card-body">
+                            <h4 class="research-card-title">Control Theory for Safety</h4>
+                            <p class="research-card-text">Classical control-theoretic analysis provides safety assurance when mathematical assumptions and models hold. We extend these tools to disturbances, uncertain agents, and measurement errors.</p>
+                            <a class="research-card-link" href="https://arxiv.org/pdf/2508.07684" target="_blank" rel="noopener">Most Recent Publication</a>
+                        </div>
+                    </article>
+                    <article class="research-card">
+                        <div class="research-card-media">
+                            <img src="{{ site.baseurl }}/img/topics/ddh.gif" alt="Data-driven & Learning-enabled Safety Frameworks">
+                        </div>
+                        <div class="research-card-body">
+                            <h4 class="research-card-title">Data-driven & Learning-enabled Safety Frameworks</h4>
+                            <p class="research-card-text">Modular safety assurance mechanisms that use trajectory data to construct and update safety constraints with provable robustness.</p>
+                            <a class="research-card-link" href="https://arxiv.org/pdf/2504.03233" target="_blank" rel="noopener">Most Recent Publication</a>
+                        </div>
+                    </article>
+                    <article class="research-card">
+                        <div class="research-card-media">
+                            <img src="{{ site.baseurl }}/img/topics/marl.png" alt="Learning-enabled Multi-Agent Decision Making Frameworks">
+                        </div>
+                        <div class="research-card-body">
+                            <h4 class="research-card-title">Learning-enabled Multi-Agent Decision Making</h4>
+                            <p class="research-card-text">Frameworks for decentralized, coordinated behaviors across robots and humans using MARL and game theory.</p>
+                            <a class="research-card-link" href="https://arxiv.org/pdf/2505.02293" target="_blank" rel="noopener">Most Recent Publication</a>
+                        </div>
+                    </article>
+                    <article class="research-card">
+                        <div class="research-card-media">
+                            <img src="{{ site.baseurl }}/img/aam.png" alt="Decision Making Architecture for Advance Air Mobility">
+                        </div>
+                        <div class="research-card-body">
+                            <h4 class="research-card-title">Decision Making for Advanced Air Mobility</h4>
+                            <p class="research-card-text">System-level safety methods for dense air operations spanning vehicle health, dynamic capabilities, and fluctuating demand.</p>
+                            <a class="research-card-link" href="https://arxiv.org/pdf/2605.20625" target="_blank" rel="noopener">Most Recent Publication</a>
+                        </div>
+                    </article>
+                    <article class="research-card">
+                        <div class="research-card-media">
+                            <img src="{{ site.baseurl }}/img/robotics.png" alt="Mobile Manipulation & Multi-Robot Teamwork">
+                        </div>
+                        <div class="research-card-body">
+                            <h4 class="research-card-title">Mobile Manipulation & Multi-Robot Teamwork</h4>
+                            <p class="research-card-text">Teams of mobile manipulators coordinating to transport and assemble objects for large-scale construction tasks.</p>
+                            <a class="research-card-link" href="" onclick="return false;">Coming Soon</a>
+                        </div>
+                    </article>
+                    <article class="research-card research-card-cta">
+                        <div class="research-card-media research-card-media-cta">
+                            <span>Choose your<br>own idea!</span>
+                        </div>
+                        <div class="research-card-body">
+                            <h4 class="research-card-title">Open Challenges</h4>
+                            <p class="research-card-text">Bring your own research idea and challenge — we welcome curiosity-driven directions.</p>
+                        </div>
+                    </article>
                 </div>
+            </div>
+            <div class="research-carousel-controls">
+                <button type="button" class="research-carousel-btn" data-carousel-prev aria-label="Previous topic">
+                    <span aria-hidden="true">&#8592;</span>
+                </button>
+                <button type="button" class="research-carousel-btn" data-carousel-next aria-label="Next topic">
+                    <span aria-hidden="true">&#8594;</span>
+                </button>
             </div>
         </div>
     </section>
